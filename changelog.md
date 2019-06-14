@@ -1,3 +1,13 @@
+# Version 1.5.1
+### What's New
+* Added Korean translations
+* Added Finnish translations
+* Added Polish translations
+* Added Belarusian translations
+* Added Ukrainian translations
+* Added Ukrainian translations
+* Added Tajik translations
+
 # Version 1.50
 ### What's New
 * Added new `dismiss()` action
