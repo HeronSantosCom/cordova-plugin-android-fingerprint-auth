@@ -66,6 +66,7 @@
         <resource-file src="res/android/values-pl" target="res/values-pl" />
         <resource-file src="res/android/values-be" target="res/values-be" />
         <resource-file src="res/android/values-fi" target="res/values-fi" />
+        <resource-file src="res/android/values-uk" target="res/values-uk" />
     </platform>
 
 </plugin>
