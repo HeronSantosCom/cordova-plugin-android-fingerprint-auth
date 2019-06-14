@@ -16,22 +16,19 @@
 
 package com.cordova.plugin.android.fingerprintauth;
 
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
+import android.content.SharedPreferences;
+import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.view.Gravity;
-import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,7 +38,6 @@ import android.widget.Toast;
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
-@RequiresApi(api = Build.VERSION_CODES.M)
 public class FingerprintAuthenticationDialogFragment extends DialogFragment
         implements FingerprintUiHelper.Callback {
 
@@ -55,7 +51,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     private Stage mStage = Stage.FINGERPRINT;
 
     private KeyguardManager mKeyguardManager;
-    private FingerprintManagerCompat.CryptoObject mCryptoObject;
+    private FingerprintManager.CryptoObject mCryptoObject;
     private FingerprintUiHelper mFingerprintUiHelper;
     FingerprintUiHelper.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
 
@@ -70,9 +66,9 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         setRetainInstance(true);
         setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Material_Light_Dialog);
 
-        mKeyguardManager = (KeyguardManager) getActivity().getSystemService(Context.KEYGUARD_SERVICE);
+        mKeyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
         mFingerprintUiHelperBuilder = new FingerprintUiHelper.FingerprintUiHelperBuilder(
-                getActivity(), getActivity().getSystemService(FingerprintManagerCompat.class));
+                getContext(), getContext().getSystemService(FingerprintManager.class));
 
     }
 
@@ -143,11 +139,6 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 .getIdentifier("new_fingerprint_enrolled_description", "id",
                         FingerprintAuth.packageName);
 
-        // Explicitly center the dialog
-        WindowManager.LayoutParams layoutParams = this.getDialog().getWindow().getAttributes();
-        layoutParams.gravity = Gravity.CENTER;
-        this.getDialog().getWindow().setAttributes(layoutParams);
-
         int fingerprint_icon_id = getResources()
                 .getIdentifier("fingerprint_icon", "id", FingerprintAuth.packageName);
         int fingerprint_status_id = getResources()
@@ -187,7 +178,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     /**
      * Sets the crypto object to be passed in when authenticating with fingerprint.
      */
-    public void setCryptoObject(FingerprintManagerCompat.CryptoObject cryptoObject) {
+    public void setCryptoObject(FingerprintManager.CryptoObject cryptoObject) {
         mCryptoObject = cryptoObject;
     }
 
@@ -250,7 +241,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE_CONFIRM_DEVICE_CREDENTIALS) {
             // Challenge completed, proceed with using cipher
-            if (resultCode == Activity.RESULT_OK) {
+            if (resultCode == getActivity().RESULT_OK) {
                 FingerprintAuth.onAuthenticated(false /* used backup */, null);
             } else {
                 // The user canceled or didn’t complete the lock screen
@@ -262,10 +253,10 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     }
 
     @Override
-    public void onAuthenticated(FingerprintManagerCompat.AuthenticationResult result) {
+    public void onAuthenticated(FingerprintManager.AuthenticationResult result) {
         // Callback from FingerprintUiHelper. Let the activity know that authentication was
         // successful.
-        FingerprintAuth.onAuthenticated(true /* withFingerprint */, new AuthenticationResultAdapter(result));
+        FingerprintAuth.onAuthenticated(true /* withFingerprint */, result);
         dismissAllowingStateLoss();
     }
 
