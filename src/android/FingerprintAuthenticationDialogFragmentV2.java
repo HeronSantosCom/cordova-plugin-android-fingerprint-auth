@@ -1,6 +1,6 @@
 package com.cordova.plugin.android.fingerprintauth;
 
-import android.app.DialogFragment;
+import android.app.BottomSheetDialog ;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,7 +22,7 @@ import android.widget.Toast;
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
-public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
+public class FingerprintAuthenticationDialogFragmentV2 extends BottomSheetDialog 
         implements FingerprintUiHelperV2.Callback {
 
     private static final String TAG = "FingerprintAuthDialog";
@@ -48,7 +48,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
 
         // Do not create a new Fragment when the Activity is re-created such as orientation changes.
         setRetainInstance(true);
-        setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Material_Light_Dialog);
+        setStyle(BottomSheetDialog.STYLE_NO_TITLE, android.R.style.BottomSheetDialogTheme);
 
         mKeyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
         mFingerprintUiHelperBuilder = new FingerprintUiHelperV2.FingerprintUiHelperBuilder(
