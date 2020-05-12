@@ -364,7 +364,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                                                 displayBiometricPrompt();
                                             } else {
                                                 mFragment.setCryptoObject(new FingerprintManager.CryptoObject(mCipher));
-                                                mFragment.setStage(FingerprintAuthenticationDialogFragment.Stage.NEW_FINGERPRINT_ENROLLED);
+                                                mFragment.setStage(FingerprintAuthenticationDialogFragmentV2.Stage.NEW_FINGERPRINT_ENROLLED);
                                                 FragmentTransaction transaction = cordova.getActivity().getFragmentManager().beginTransaction();
                                                 transaction.add(mFragment, DIALOG_FRAGMENT_TAG);
                                                 transaction.commitAllowingStateLoss();

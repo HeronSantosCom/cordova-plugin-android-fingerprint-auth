@@ -240,7 +240,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
     public void onAuthenticated(FingerprintManager.AuthenticationResult result) {
         // Callback from FingerprintUiHelper. Let the activity know that authentication was
         // successful.
-        FingerprintAuthV2.onAuthenticated(true /* withFingerprint */, new AuthenticationResultAdapter(result));
+        FingerprintAuthV2.onAuthenticated(true /* withFingerprint */, new AuthenticationResultAdapterV2(result));
         dismissAllowingStateLoss();
     }
 
