@@ -93,7 +93,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
                 .getIdentifier("fingerprint_auth_dialog_title", "id", FingerprintAuthV2.packageName);
         TextView dialogTitleTextView = (TextView) v.findViewById(fingerprint_auth_dialog_title_id);
         if (null != FingerprintAuthV2.mDialogTitle) {
-            dialogTitleTextView.setText(FingerprintAuth.mDialogTitle);
+            dialogTitleTextView.setText(FingerprintAuthV2.mDialogTitle);
         }
 
         // Set dialog message
@@ -101,7 +101,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
                 .getIdentifier("fingerprint_description", "id", FingerprintAuthV2.packageName);
         TextView dialogMessageTextView = (TextView) v.findViewById(fingerprint_description_id);
         if (null != FingerprintAuthV2.mDialogMessage) {
-            dialogMessageTextView.setText(FingerprintAuth.mDialogMessage);
+            dialogMessageTextView.setText(FingerprintAuthV2.mDialogMessage);
         }
 
         // Set dialog hing
@@ -109,7 +109,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
                 .getIdentifier("fingerprint_status", "id", FingerprintAuthV2.packageName);
         TextView dialogHintTextView = (TextView) v.findViewById(fingerprint_hint_id);
         if (null != FingerprintAuthV2.mDialogHint) {
-            dialogHintTextView.setText(FingerprintAuth.mDialogHint);
+            dialogHintTextView.setText(FingerprintAuthV2.mDialogHint);
         }
 
         int cancel_button_id = getResources()
@@ -126,7 +126,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         int second_dialog_button_id = getResources()
                 .getIdentifier("second_dialog_button", "id", FingerprintAuthV2.packageName);
         mSecondDialogButton = (Button) v.findViewById(second_dialog_button_id);
-        if (FingerprintAuth.mDisableBackup) {
+        if (FingerprintAuthV2.mDisableBackup) {
             mSecondDialogButton.setVisibility(View.GONE);
         }
         mSecondDialogButton.setOnClickListener(new View.OnClickListener() {
@@ -271,7 +271,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
 
     @Override
     public void onError(CharSequence errString) {
-        if (!FingerprintAuth.mDisableBackup) {
+        if (!FingerprintAuthV2.mDisableBackup) {
             if (getActivity() != null && isAdded()) {
                 goToBackup();
             }
