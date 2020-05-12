@@ -1,6 +1,6 @@
 package com.cordova.plugin.android.fingerprintauth;
 
-import android.app.BottomSheetDialog;
+import android.app.DialogFragment;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,7 +22,7 @@ import android.widget.Toast;
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
-public class FingerprintAuthenticationDialogFragmentV2 extends BottomSheetDialog 
+public class FingerprintAuthenticationDialogFragmentV2 extends BottomSheetDialogFragment 
         implements FingerprintUiHelperV2.Callback {
 
     private static final String TAG = "FingerprintAuthDialog";
