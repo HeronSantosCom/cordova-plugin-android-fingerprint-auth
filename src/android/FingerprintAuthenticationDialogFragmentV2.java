@@ -41,7 +41,7 @@ import org.apache.cordova.CordovaInterface;
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
-@RequiresApi(api = Build.VERSION_CODES.M)
+
 public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         implements FingerprintUiHelperV2.Callback {
 
