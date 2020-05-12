@@ -22,7 +22,6 @@ import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
-import com.bssys.correqtsretail.R;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
