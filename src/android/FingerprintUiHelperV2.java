@@ -50,7 +50,7 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
         private final FingerprintManager mFingerPrintManager;
         private final Context mContext;
 
-        public FingerprintUiHelperV2Builder(Context context, FingerprintManager fingerprintManager) {
+        public FingerprintUiHelperBuilder(Context context, FingerprintManager fingerprintManager) {
             mFingerPrintManager = fingerprintManager;
             mContext = context;
         }
