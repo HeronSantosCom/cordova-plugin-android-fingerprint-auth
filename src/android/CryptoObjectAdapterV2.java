@@ -2,20 +2,20 @@ package com.cordova.plugin.android.fingerprintauth;
 
 import android.hardware.biometrics.BiometricPrompt;
 import android.os.Build;
-import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
+import android.hardware.fingerprint.FingerprintManager;
 
 import javax.crypto.Cipher;
 
 class CryptoObjectAdapter {
 
     private BiometricPrompt.CryptoObject biometricCryptoObject;
-    private FingerprintManagerCompat.CryptoObject fingerprintCryptoObject;
+    private FingerprintManager.CryptoObject fingerprintCryptoObject;
 
     CryptoObjectAdapter(Cipher mCipher) {
-        fingerprintCryptoObject = new FingerprintManagerCompat.CryptoObject(mCipher);
+        fingerprintCryptoObject = new FingerprintManager.CryptoObject(mCipher);
     }
 
-    CryptoObjectAdapter(FingerprintManagerCompat.AuthenticationResult result) {
+    CryptoObjectAdapter(FingerprintManager.AuthenticationResult result) {
         fingerprintCryptoObject = result.getCryptoObject();
     }
 
