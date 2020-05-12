@@ -615,7 +615,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     }
 
     public static void onAuthenticated(boolean withFingerprint,
-                                       AuthenticationResultAdapter result) {
+                                       AuthenticationResultAdapterV2 result) {
         JSONObject resultJson = new JSONObject();
         String errorMessage = "";
         boolean createdResultJson = false;
@@ -790,8 +790,8 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     @RequiresApi(Build.VERSION_CODES.P)
     private void displayBiometricPrompt() {
         Context context = cordova.getContext();
-        String title = FingerprintAuth.mDialogTitle == null ? context.getString(R.string.fingerprint_auth_dialog_title) : FingerprintAuth.mDialogTitle;
-        String message = FingerprintAuth.mDialogMessage == null ? context.getString(R.string.fingerprint_description) : FingerprintAuth.mDialogMessage;
+        String title = FingerprintAuthV2.mDialogTitle == null ? context.getString(R.string.fingerprint_auth_dialog_title) : FingerprintAuthV2.mDialogTitle;
+        String message = FingerprintAuthV2.mDialogMessage == null ? context.getString(R.string.fingerprint_description) : FingerprintAuthV2.mDialogMessage;
         new BiometricPrompt.Builder(context)
                 .setTitle(title)
                 .setDescription(message)
@@ -811,7 +811,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
 
                     @Override
                     public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
-                        onAuthenticated(true, new AuthenticationResultAdapter(result));
+                        onAuthenticated(true, new AuthenticationResultAdapterV2(result));
                     }
                 });
     }
