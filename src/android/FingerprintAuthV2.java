@@ -126,9 +126,10 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     public static int mMaxAttempts = 6;  // one more than the device default to prevent a 2nd callback
     private String mLangCode = "en_US";
     private static boolean mUserAuthRequired = false;
-    public static String mDialogTitle;
-    public static String mDialogMessage;
-    public static String mDialogHint;
+    public static String mDialogTitle = "";
+    public static String mDialogMessage = "";
+    public static String mDialogHint = "";
+	public static String mDialogCancel = "";
     public boolean mEncryptNoAuth = false;
 
 
@@ -305,6 +306,9 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                     if (arg_object.has("dialogHint")) {
                         mDialogHint = arg_object.getString("dialogHint");
                     }
+					if (arg_object.has("dialogCancel")) {
+						mDialogCancel = arg_object.getString("dialogCancel");
+					}
 
                     // Set language
                     Resources res = cordova.getActivity().getResources();
@@ -790,12 +794,13 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     @RequiresApi(Build.VERSION_CODES.P)
     private void displayBiometricPrompt() {
         Context context = cordova.getContext();
-        String title = FingerprintAuthV2.mDialogTitle == null ? String  "" : FingerprintAuthV2.mDialogTitle;
-        String message = FingerprintAuthV2.mDialogMessage == null ? String "" : FingerprintAuthV2.mDialogMessage;
+        String title = FingerprintAuthV2.mDialogTitle;
+        String message = FingerprintAuthV2.mDialogMessage;
+		String cancel = FingerprintAuthV2.mDialogCancel
         new BiometricPrompt.Builder(context)
                 .setTitle(title)
                 .setDescription(message)
-                .setNegativeButton(String "", context.getMainExecutor(),
+                .setNegativeButton(cancel, context.getMainExecutor(),
                         (dialogInterface, i) -> onCancelled())
                 .build()
                 .authenticate(new BiometricPrompt.CryptoObject(mCipher), mCancellationSignal, context.getMainExecutor(), new BiometricPrompt.AuthenticationCallback() {
