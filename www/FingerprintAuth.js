@@ -1,5 +1,5 @@
 function FingerprintAuth() {
-    FingerprintAuth.prototype.ERRORS = {
+    FingerprintAuthV2.prototype.ERRORS = {
         BAD_PADDING_EXCEPTION: "BAD_PADDING_EXCEPTION",
         CERTIFICATE_EXCEPTION: "CERTIFICATE_EXCEPTION",
         FINGERPRINT_CANCELLED: "FINGERPRINT_CANCELLED",
