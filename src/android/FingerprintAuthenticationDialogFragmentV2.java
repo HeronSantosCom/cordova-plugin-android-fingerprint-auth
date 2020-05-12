@@ -16,13 +16,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-
 /**
  * A dialog which uses fingerprint APIs to authenticate the user, and falls back to password
  * authentication if fingerprint is not available.
  */
-public class FingerprintAuthenticationDialogFragmentV2 extends BottomSheetDialog
+public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         implements FingerprintUiHelperV2.Callback {
 
     private static final String TAG = "FingerprintAuthDialog";
@@ -48,7 +46,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends BottomSheetDialog
 
         // Do not create a new Fragment when the Activity is re-created such as orientation changes.
         setRetainInstance(true);
-        setStyle(BottomSheetDialog.STYLE_NO_TITLE, android.R.style.Theme_Material_Light_Dialog);
+        setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Material_Light_Dialog);
 
         mKeyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
         mFingerprintUiHelperBuilder = new FingerprintUiHelperV2.FingerprintUiHelperBuilder(
