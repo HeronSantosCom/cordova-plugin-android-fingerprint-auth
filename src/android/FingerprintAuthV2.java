@@ -17,7 +17,7 @@ import android.os.CancellationSignal;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 import android.support.annotation.RequiresApi;
-import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
+import android.hardware.fingerprint.FingerprintManager;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -440,7 +440,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
         }
         // Show the fingerprint dialog. The user has the option to use the fingerprint with
         // crypto, or you can fall back to using a server-side verified password.
-        mFragment.setCryptoObject(new FingerprintManagerCompat.CryptoObject(mCipher));
+        mFragment.setCryptoObject(new FingerprintManager.CryptoObject(mCipher));
         FragmentTransaction transaction = cordova.getActivity().getFragmentManager().beginTransaction();
         transaction.add(mFragment, DIALOG_FRAGMENT_TAG);
         transaction.commitAllowingStateLoss();

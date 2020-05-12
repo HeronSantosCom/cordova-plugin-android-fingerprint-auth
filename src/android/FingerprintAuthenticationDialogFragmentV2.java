@@ -56,7 +56,6 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
     private KeyguardManager mKeyguardManager;
     private FingerprintManager.CryptoObject mCryptoObject;
     private FingerprintUiHelperV2 mFingerprintUiHelper;
-    private FingerprintAuthV2 mFingerPrintAuth;
     FingerprintUiHelperV2.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
 
     public FingerprintAuthenticationDialogFragmentV2() {
@@ -185,7 +184,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         if (requestCode == REQUEST_CODE_CONFIRM_DEVICE_CREDENTIALS) {
             // Challenge completed, proceed with using cipher
             if (resultCode == Activity.RESULT_OK) {
-                mFingerPrintAuth.onAuthenticated(false /* used backup */);
+                FingerprintAuthV2.onAuthenticated(false /* used backup */);
             } else {
                 // The user canceled or didn’t complete the lock screen
                 // operation. Go to error/cancellation flow.
@@ -199,7 +198,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
     public void onAuthenticated() {
         // Callback from FingerprintUiHelper. Let the activity know that authentication was
         // successful.
-        mFingerPrintAuth.onAuthenticated(true /* withFingerprint */);
+        FingerprintAuthV2.onAuthenticated(true /* withFingerprint */);
         dismissAllowingStateLoss();
     }
 
