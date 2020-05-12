@@ -796,7 +796,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
         Context context = cordova.getContext();
         String title = FingerprintAuthV2.mDialogTitle;
         String message = FingerprintAuthV2.mDialogMessage;
-		String cancel = FingerprintAuthV2.mDialogCancel
+		String cancel = FingerprintAuthV2.mDialogCancel;
         new BiometricPrompt.Builder(context)
                 .setTitle(title)
                 .setDescription(message)
