@@ -26,7 +26,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.view.Gravity;
-import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
+import androidx.core.hardware.fingerprint.FingerprintManagerCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
