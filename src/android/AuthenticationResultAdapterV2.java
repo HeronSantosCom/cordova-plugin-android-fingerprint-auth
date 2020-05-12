@@ -7,11 +7,11 @@ public class AuthenticationResultAdapterV2 {
     private BiometricPrompt.AuthenticationResult biometricResult;
     private FingerprintManagerCompat.AuthenticationResult fingerprintResult;
 
-    public AuthenticationResultAdapter(BiometricPrompt.AuthenticationResult biometricResult) {
+    public AuthenticationResultAdapterV2(BiometricPrompt.AuthenticationResult biometricResult) {
         this.biometricResult = biometricResult;
     }
 
-    public AuthenticationResultAdapter(FingerprintManagerCompat.AuthenticationResult fingerprintResult) {
+    public AuthenticationResultAdapterV2(FingerprintManagerCompat.AuthenticationResult fingerprintResult) {
         this.fingerprintResult = fingerprintResult;
     }
 

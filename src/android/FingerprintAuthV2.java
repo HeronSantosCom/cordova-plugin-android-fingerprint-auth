@@ -69,7 +69,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     public static Context mContext;
     public static Activity mActivity;
     public KeyguardManager mKeyguardManager;
-    public FingerprintAuthenticationDialogFragment mFragment;
+    public FingerprintAuthenticationDialogFragmentV2 mFragment;
     public static KeyStore mKeyStore;
     public static KeyGenerator mKeyGenerator;
     public static Cipher mCipher;
@@ -136,7 +136,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     /**
      * Constructor.
      */
-    public FingerprintAuth() {
+    public FingerprintAuthV2() {
     }
 
     /**
@@ -429,11 +429,11 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     }
 
     private void displayFingerprintDialogV23(Boolean newFingerprintEnrolled) {
-        mFragment = new FingerprintAuthenticationDialogFragment();
+        mFragment = new FingerprintAuthenticationDialogFragmentV2();
         if (!newFingerprintEnrolled) {
             mFragment.setCancelable(false);
         } else {
-            mFragment.setStage(FingerprintAuthenticationDialogFragment.Stage.NEW_FINGERPRINT_ENROLLED);
+            mFragment.setStage(FingerprintAuthenticationDialogFragmentV2.Stage.NEW_FINGERPRINT_ENROLLED);
         }
         // Show the fingerprint dialog. The user has the option to use the fingerprint with
         // crypto, or you can fall back to using a server-side verified password.

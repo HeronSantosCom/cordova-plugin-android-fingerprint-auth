@@ -67,7 +67,7 @@ public class FingerprintUiHelperV2 extends FingerprintManagerCompat.Authenticati
      * Constructor for {@link FingerprintUiHelper}. This method is expected to be called from
      * only the {@link FingerprintUiHelperBuilder} class.
      */
-    private FingerprintUiHelper(Context context, FingerprintManagerCompat FingerprintManagerCompat,
+    private FingerprintUiHelperV2(Context context, FingerprintManagerCompat FingerprintManagerCompat,
             ImageView icon, TextView errorTextView, Callback callback) {
         mFingerprintManagerCompat = FingerprintManagerCompat;
         mIcon = icon;

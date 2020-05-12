@@ -59,7 +59,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
     private FingerprintUiHelper mFingerprintUiHelper;
     FingerprintUiHelper.FingerprintUiHelperBuilder mFingerprintUiHelperBuilder;
 
-    public FingerprintAuthenticationDialogFragment() {
+    public FingerprintAuthenticationDialogFragmentV2() {
     }
 
     @Override
