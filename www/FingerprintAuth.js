@@ -25,7 +25,7 @@ FingerprintAuth.prototype.encrypt = function (params, successCallback, errorCall
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "encrypt", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -37,7 +37,7 @@ FingerprintAuth.prototype.decrypt = function (params, successCallback, errorCall
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "decrypt", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -49,7 +49,7 @@ FingerprintAuth.prototype.delete = function (params, successCallback, errorCallb
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "delete", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -61,7 +61,7 @@ FingerprintAuth.prototype.dismiss = function (successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "dismiss", // action
         [{}]
     );
@@ -71,7 +71,7 @@ FingerprintAuth.prototype.isAvailable = function (successCallback, errorCallback
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "availability", // action
         [{}]
     );

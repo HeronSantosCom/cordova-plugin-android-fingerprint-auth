@@ -3,7 +3,7 @@ package com.cordova.plugin.android.fingerprintauth;
 import android.hardware.biometrics.BiometricPrompt;
 import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
 
-public class AuthenticationResultAdapter {
+public class AuthenticationResultAdapterV2 {
     private BiometricPrompt.AuthenticationResult biometricResult;
     private FingerprintManagerCompat.AuthenticationResult fingerprintResult;
 

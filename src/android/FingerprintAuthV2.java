@@ -54,7 +54,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
 @TargetApi(23)
-public class FingerprintAuth extends CordovaPlugin {
+public class FingerprintAuthV2 extends CordovaPlugin {
     public static final String TAG = "FingerprintAuth";
     public static String packageName;
 

@@ -42,7 +42,7 @@ import android.widget.Toast;
  * authentication if fingerprint is not available.
  */
 @RequiresApi(api = Build.VERSION_CODES.M)
-public class FingerprintAuthenticationDialogFragment extends DialogFragment
+public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         implements FingerprintUiHelper.Callback {
 
     private static final String TAG = "FingerprintAuthDialog";
