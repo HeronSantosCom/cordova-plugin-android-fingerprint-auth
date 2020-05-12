@@ -790,12 +790,12 @@ public class FingerprintAuthV2 extends CordovaPlugin {
     @RequiresApi(Build.VERSION_CODES.P)
     private void displayBiometricPrompt() {
         Context context = cordova.getContext();
-        String title = FingerprintAuthV2.mDialogTitle == null ? "" : FingerprintAuthV2.mDialogTitle;
-        String message = FingerprintAuthV2.mDialogMessage == null ? "" : FingerprintAuthV2.mDialogMessage;
+        String title = FingerprintAuthV2.mDialogTitle == null ? String  "" : FingerprintAuthV2.mDialogTitle;
+        String message = FingerprintAuthV2.mDialogMessage == null ? String "" : FingerprintAuthV2.mDialogMessage;
         new BiometricPrompt.Builder(context)
                 .setTitle(title)
                 .setDescription(message)
-                .setNegativeButton("", context.getMainExecutor(),
+                .setNegativeButton(String "", context.getMainExecutor(),
                         (dialogInterface, i) -> onCancelled())
                 .build()
                 .authenticate(new BiometricPrompt.CryptoObject(mCipher), mCancellationSignal, context.getMainExecutor(), new BiometricPrompt.AuthenticationCallback() {
