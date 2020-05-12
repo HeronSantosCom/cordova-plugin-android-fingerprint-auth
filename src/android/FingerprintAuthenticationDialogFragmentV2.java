@@ -1,6 +1,7 @@
 package com.cordova.plugin.android.fingerprintauth;
 
 import android.app.DialogFragment;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.DialogInterface;
