@@ -28,7 +28,7 @@
             <!-- Step 2: This permission is depreciated in Android P  -->
             <uses-permission android:name="android.permission.USE_FINGERPRINT" />
         </config-file>
-
+		<framework src="com.android.support:design:22.+" />
         <source-file src="src/android/CryptoObjectAdapterV2.java" target-dir="src/com/cordova/plugin/android/fingerprintauth" />
         <source-file src="src/android/AuthenticationResultAdapterV2.java" target-dir="src/com/cordova/plugin/android/fingerprintauth" />
         <source-file src="src/android/FingerprintAuthV2.java" target-dir="src/com/cordova/plugin/android/fingerprintauth" />
