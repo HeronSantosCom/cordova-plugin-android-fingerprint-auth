@@ -1,4 +1,4 @@
-function FingerprintAuth() {
+function FingerprintAuthV2() {
     FingerprintAuthV2.prototype.ERRORS = {
         BAD_PADDING_EXCEPTION: "BAD_PADDING_EXCEPTION",
         CERTIFICATE_EXCEPTION: "CERTIFICATE_EXCEPTION",
@@ -21,7 +21,7 @@ function FingerprintAuth() {
     }
 }
 
-FingerprintAuth.prototype.encrypt = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.encrypt = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
@@ -33,7 +33,7 @@ FingerprintAuth.prototype.encrypt = function (params, successCallback, errorCall
     );
 };
 
-FingerprintAuth.prototype.decrypt = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.decrypt = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
@@ -45,7 +45,7 @@ FingerprintAuth.prototype.decrypt = function (params, successCallback, errorCall
     );
 };
 
-FingerprintAuth.prototype.delete = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.delete = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
@@ -57,7 +57,7 @@ FingerprintAuth.prototype.delete = function (params, successCallback, errorCallb
     );
 };
 
-FingerprintAuth.prototype.dismiss = function (successCallback, errorCallback) {
+FingerprintAuthV2.prototype.dismiss = function (successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
@@ -67,7 +67,7 @@ FingerprintAuth.prototype.dismiss = function (successCallback, errorCallback) {
     );
 };
 
-FingerprintAuth.prototype.isAvailable = function (successCallback, errorCallback) {
+FingerprintAuthV2.prototype.isAvailable = function (successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
@@ -77,5 +77,5 @@ FingerprintAuth.prototype.isAvailable = function (successCallback, errorCallback
     );
 };
 
-FingerprintAuth = new FingerprintAuth();
-module.exports = FingerprintAuth;
+FingerprintAuthV2 = new FingerprintAuthV2();
+module.exports = FingerprintAuthV2;
