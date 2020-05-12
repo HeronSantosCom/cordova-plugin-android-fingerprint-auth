@@ -624,7 +624,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
 
         try {
             byte[] bytes;
-            FingerprintManager.CryptoObject cryptoObject = null;
+            CryptoObjectAdapter cryptoObject = null;
 
             if (withFingerprint) {
                 resultJson.put("withFingerprint", true);
@@ -638,7 +638,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                 }
 
                 if (initCipher()) {
-                    cryptoObject = new FingerprintManager.CryptoObject(mCipher);
+                    cryptoObject = new CryptoObjectAdapter(mCipher);
                 }
             }
 
