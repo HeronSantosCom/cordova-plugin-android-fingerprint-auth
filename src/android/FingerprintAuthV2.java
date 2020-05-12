@@ -346,7 +346,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                                     // Set up the crypto object for later. The object will be authenticated by use
                                     // of the fingerprint.
                                     if (initCipher()) {
-										mFragment = new FingerprintAuthenticationDialogFragment();
+										mFragment = new FingerprintAuthenticationDialogFragmentV2();
                                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                                             displayBiometricPrompt();
                                         } else {
