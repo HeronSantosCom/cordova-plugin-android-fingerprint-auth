@@ -5,7 +5,9 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.app.KeyguardManager;
+import android.content.DialogInterface;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -799,7 +801,13 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                 .setTitle(title)
                 .setDescription(message)
                 .setNegativeButton(cancel, context.getMainExecutor(),
-                        (dialogInterface, i) -> onCancelled())
+                       new DialogInterface.OnClickListener() {
+                           @Override
+                           public void onClick() {
+                               onCancelled();
+                           }
+                       }
+                    )
                 .build()
                 .authenticate(new BiometricPrompt.CryptoObject(mCipher), mCancellationSignal, context.getMainExecutor(), new BiometricPrompt.AuthenticationCallback() {
                     @Override
