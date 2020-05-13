@@ -7,7 +7,6 @@ import android.app.FragmentTransaction;
 import android.app.KeyguardManager;
 import android.content.DialogInterface;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -803,7 +802,7 @@ public class FingerprintAuthV2 extends CordovaPlugin {
                 .setNegativeButton(cancel, context.getMainExecutor(),
                        new DialogInterface.OnClickListener() {
                            @Override
-                           public void onClick() {
+                           public void onClick(DialogInterface dialogInterface, int i) {
                                onCancelled();
                            }
                        }
