@@ -90,9 +90,9 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
         mFingerprintManager
                 .authenticate(cryptoObject, mCancellationSignal, 0 /* flags */, this, null);
 
-        int ic_fp_40px_id = mContext.getResources()
-                .getIdentifier("ic_fp_40px", "drawable", FingerprintAuthV2.packageName);
-        mIcon.setImageResource(ic_fp_40px_id);
+        int icv2_fp_40px_id = mContext.getResources()
+                .getIdentifier("icv2_fp_40px", "drawable", FingerprintAuthV2.packageName);
+        mIcon.setImageResource(icv2_fp_40px_id);
     }
 
     public void stopListening() {
@@ -150,9 +150,9 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
         fingerprintResult = result;
         mErrorTextView.removeCallbacks(mResetErrorTextRunnable);
-        int ic_fingerprint_success_id = mContext.getResources()
-                .getIdentifier("ic_fingerprint_success", "drawable", FingerprintAuthV2.packageName);
-        mIcon.setImageResource(ic_fingerprint_success_id);
+        int icv2_fingerprint_success_id = mContext.getResources()
+                .getIdentifier("icv2_fingerprint_success", "drawable", FingerprintAuthV2.packageName);
+        mIcon.setImageResource(icv2_fingerprint_success_id);
         int success_color_id = mContext.getResources()
                 .getIdentifier("success_color", "color", FingerprintAuthV2.packageName);
         mErrorTextView.setTextColor(
@@ -170,9 +170,9 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
     }
 
     private void showError(CharSequence error) {
-        int ic_fingerprint_error_id = mContext.getResources()
-                .getIdentifier("ic_fingerprint_error", "drawable", FingerprintAuthV2.packageName);
-        mIcon.setImageResource(ic_fingerprint_error_id);
+        int icv2_fingerprint_error_id = mContext.getResources()
+                .getIdentifier("icv2_fingerprint_error", "drawable", FingerprintAuthV2.packageName);
+        mIcon.setImageResource(icv2_fingerprint_error_id);
         mErrorTextView.setText(error);
         int warning_color_id = mContext.getResources()
                 .getIdentifier("warning_color", "color", FingerprintAuthV2.packageName);
@@ -193,9 +193,9 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
                     .getIdentifier("fingerprint_hint", "string", FingerprintAuthV2.packageName);
             mErrorTextView.setText(
                     mErrorTextView.getResources().getString(fingerprint_hint_id));
-            int ic_fp_40px_id = mContext.getResources()
-                    .getIdentifier("ic_fp_40px", "drawable", FingerprintAuthV2.packageName);
-            mIcon.setImageResource(ic_fp_40px_id);
+            int icv2_fp_40px_id = mContext.getResources()
+                    .getIdentifier("icv2_fp_40px", "drawable", FingerprintAuthV2.packageName);
+            mIcon.setImageResource(icv2_fp_40px_id);
         }
     };
 

@@ -57,7 +57,7 @@
             android:id="@+id/fingerprint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_fp_40px" />
+            android:src="@drawable/icv2_fp_40px" />
 
         <TextView
             android:id="@+id/fingerprint_status"
