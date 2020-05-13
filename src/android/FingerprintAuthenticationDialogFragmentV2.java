@@ -62,7 +62,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
 
         // Inflate layout
         int fingerprint_dialog_container_id = getResources()
-                .getIdentifier("fingerprint_dialog_container", "layout",
+                .getIdentifier("fingerprint_dialog_container_v2", "layout",
                         FingerprintAuthV2.packageName);
         View v = inflater.inflate(fingerprint_dialog_container_id, container, false);
 
