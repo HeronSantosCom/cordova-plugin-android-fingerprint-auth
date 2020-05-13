@@ -84,14 +84,14 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
 
         // Set dialog hing
         int fingerprint_hint_id = getResources()
-                .getIdentifier("fingerprint_status", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("fingerprint_statusV2", "id", FingerprintAuthV2.packageName);
         TextView dialogHintTextView = (TextView) v.findViewById(fingerprint_hint_id);
         if (null != FingerprintAuthV2.mDialogHint) {
             dialogHintTextView.setText(FingerprintAuthV2.mDialogHint);
         }
 
         int cancel_button_id = getResources()
-                .getIdentifier("cancel_button", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("cancel_buttonV2", "id", FingerprintAuthV2.packageName);
         mCancelButton = (Button) v.findViewById(cancel_button_id);
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +102,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
         });
 
         int second_dialog_button_id = getResources()
-                .getIdentifier("second_dialog_button", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("second_dialog_buttonV2", "id", FingerprintAuthV2.packageName);
         mSecondDialogButton = (Button) v.findViewById(second_dialog_button_id);
         if (FingerprintAuthV2.mDisableBackup) {
             mSecondDialogButton.setVisibility(View.GONE);
@@ -114,7 +114,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
             }
         });
         int fingerprint_container_id = getResources()
-                .getIdentifier("fingerprint_container", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("fingerprint_containerV2", "id", FingerprintAuthV2.packageName);
         mFingerprintContent = v.findViewById(fingerprint_container_id);
 
         int new_fingerprint_enrolled_description_id = getResources()
@@ -122,9 +122,9 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
                         FingerprintAuthV2.packageName);
 
         int fingerprint_icon_id = getResources()
-                .getIdentifier("fingerprint_icon", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("fingerprint_iconV2", "id", FingerprintAuthV2.packageName);
         int fingerprint_status_id = getResources()
-                .getIdentifier("fingerprint_status", "id", FingerprintAuthV2.packageName);
+                .getIdentifier("fingerprint_statusV2", "id", FingerprintAuthV2.packageName);
         mFingerprintUiHelper = mFingerprintUiHelperBuilder.build(
                 (ImageView) v.findViewById(fingerprint_icon_id),
                 (TextView) v.findViewById(fingerprint_status_id), this);
