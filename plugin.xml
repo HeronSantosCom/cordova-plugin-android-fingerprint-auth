@@ -44,8 +44,8 @@
         <resource-file src="res/android/drawable-xxxhdpi/icv2_fp_40px.png" target="res/drawable-xxxhdpi/icv2_fp_40px.png" />
         <resource-file src="res/android/layout/fingerprint_dialog_container_v2.xml" target="res/layout/fingerprint_dialog_container_v2.xml" />
         <resource-file src="res/android/layout/fingerprint_dialog_content_v2.xml" target="res/layout/fingerprint_dialog_content_v2.xml" />
-        <resource-file src="res/android/values/fpauth-colors.xml" target="res/values/fpauth-colors.xml" />
-        <resource-file src="res/android/values/fpauth-strings.xml" target="res/values/fpauth-strings.xml" />
+        <resource-file src="res/android/values/fpauth-colorsV2.xml" target="res/values/fpauth-colorsV2.xml" />
+        <resource-file src="res/android/values/fpauth-stringsV2.xml" target="res/values/fpauth-stringsV2.xml" />
     </platform>
 
 </plugin>
