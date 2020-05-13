@@ -46,28 +46,6 @@
         <resource-file src="res/android/layout/fingerprint_dialog_content.xml" target="res/layout/fingerprint_dialog_content.xml" />
         <resource-file src="res/android/values/fpauth-colors.xml" target="res/values/fpauth-colors.xml" />
         <resource-file src="res/android/values/fpauth-strings.xml" target="res/values/fpauth-strings.xml" />
-        <resource-file src="res/android/values-it" target="res/values-it" />
-        <resource-file src="res/android/values-es" target="res/values-es" />
-        <resource-file src="res/android/values-ru" target="res/values-ru" />
-        <resource-file src="res/android/values-fr" target="res/values-fr" />
-        <resource-file src="res/android/values-zh" target="res/values-zh" />
-        <resource-file src="res/android/values-zh-rCN" target="res/values-zh-rCN" />
-        <resource-file src="res/android/values-zh-rHK" target="res/values-zh-rHK" />
-        <resource-file src="res/android/values-zh-rMO" target="res/values-zh-rMO" />
-        <resource-file src="res/android/values-zh-rSG" target="res/values-zh-rSG" />
-        <resource-file src="res/android/values-zh-rTW" target="res/values-zh-rTW" />
-        <resource-file src="res/android/values-no" target="res/values-no" />
-        <resource-file src="res/android/values-pt" target="res/values-pt" />
-        <resource-file src="res/android/values-ja" target="res/values-ja" />
-        <resource-file src="res/android/values-de" target="res/values-de" />
-        <resource-file src="res/android/values-th" target="res/values-th" />
-        <resource-file src="res/android/values-ar" target="res/values-ar" />
-        <resource-file src="res/android/values-ko" target="res/values-ko" />
-        <resource-file src="res/android/values-pl" target="res/values-pl" />
-        <resource-file src="res/android/values-be" target="res/values-be" />
-        <resource-file src="res/android/values-fi" target="res/values-fi" />
-        <resource-file src="res/android/values-uk" target="res/values-uk" />
-        <resource-file src="res/android/values-tg" target="res/values-tg" />
     </platform>
 
 </plugin>
