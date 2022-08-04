@@ -16,6 +16,8 @@
 
     <!-- android -->
     <platform name="android">
+	
+	
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FingerprintAuthV2" >
                 <param name="android-package" value="com.cordova.plugin.android.fingerprintauth.FingerprintAuthV2"/>
@@ -46,6 +48,7 @@
         <resource-file src="res/android/layout/fingerprint_dialog_content_v2.xml" target="res/layout/fingerprint_dialog_content_v2.xml" />
         <resource-file src="res/android/values/fpauth-colorsV2.xml" target="res/values/fpauth-colorsV2.xml" />
         <resource-file src="res/android/values/fpauth-stringsV2.xml" target="res/values/fpauth-stringsV2.xml" />
+		<framework src="com.android.support:support-annotations:28.0.0" />
     </platform>
 
 </plugin>
