@@ -1,4 +1,14 @@
-# Version 1.50
+# Version 1.5.1
+### What's New
+* Fixed by [benjamin committed on Jun 17, 2020](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/1ffa86fd635dbbe72d949773c855aea7a53c33f1)
+* Fixed by [aliitotz@99194dd497dc22026dfa15662d84545f411ca0b3 committed on Oct 7, 2021](https://github.com/aliitotz/cordova-plugin-android-fingerprint-auth/commit/99194dd497dc22026dfa15662d84545f411ca0b3)
+* Fixed by [Benjamin Lüscher committed on Dec 13, 2021](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/7a2a20608411cd01bd0200d2c25f080071d31e8a)
+* Fixed by [benjamin-luescher committed on Dec 14, 2021](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/d3666121840cf4ed2dc412de804fd327d25d773d)
+* Fixed by [Benjamin Lüscher committed on Feb 8, 2022](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/867819311dc542e091232c51ad3091c25cf00624)
+* Fixed by [Benjamin Lüscher committed on Apr 4, 2022](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/d02a46acdd8820603634f66b15550e8993c7746b)
+* Fixed by [pinionpi@4ca0fcabd169be4596ed1d7a276ced91bf33b0d2 committed on Apr 7, 2023](https://github.com/pinionpi/cordova-plugin-android-fingerprint-auth/commit/4ca0fcabd169be4596ed1d7a276ced91bf33b0d2)
+
+# Version 1.5.0
 ### What's New
 * Added new `dismiss()` action
 

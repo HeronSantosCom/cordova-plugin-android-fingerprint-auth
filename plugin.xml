@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-android-fingerprint-auth"
-        version="1.5.0">
+        version="1.5.1">
     <name>FingerprintAuth</name>
     <description>Cordova plugin to use Android fingerprint authentication API</description>
     <license>Apache 2.0</license>
@@ -22,7 +22,7 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+            <uses-permission android:name="android.permission.USE_BIOMETRIC" />
         </config-file>
 
         <source-file src="src/android/FingerprintAuth.java" target-dir="src/com/cordova/plugin/android/fingerprintauth" />

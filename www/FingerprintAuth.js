@@ -1,3 +1,5 @@
+var exec = require("cordova/exec");
+
 function FingerprintAuth() {
     FingerprintAuth.prototype.ERRORS = {
         BAD_PADDING_EXCEPTION: "BAD_PADDING_EXCEPTION",

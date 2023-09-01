@@ -274,6 +274,12 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
     }
 
     @Override
+    public void onCancelledByUser() {
+        FingerprintAuth.onCancelled();
+        dismissAllowingStateLoss();
+    }
+
+    @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
         FingerprintAuth.onCancelled();

@@ -441,9 +441,15 @@ public class FingerprintAuth extends CordovaPlugin {
         String errorMessage = null;
         JSONObject resultJson = new JSONObject();
         try {
-            resultJson.put("isAvailable", isFingerprintAuthAvailable());
-            resultJson.put("isHardwareDetected", mFingerPrintManager.isHardwareDetected());
-            resultJson.put("hasEnrolledFingerprints", mFingerPrintManager.hasEnrolledFingerprints());
+            if (mFingerPrintManager == null) {
+                resultJson.put("isAvailable", false);
+                resultJson.put("isHardwareDetected", false);
+                resultJson.put("hasEnrolledFingerprints", false);
+            } else {
+                resultJson.put("isAvailable", isFingerprintAuthAvailable());
+                resultJson.put("isHardwareDetected", mFingerPrintManager.isHardwareDetected());
+                resultJson.put("hasEnrolledFingerprints", mFingerPrintManager.hasEnrolledFingerprints());
+            }
             mPluginResult = new PluginResult(PluginResult.Status.OK);
             mCallbackContext.success(resultJson);
             mCallbackContext.sendPluginResult(mPluginResult);
