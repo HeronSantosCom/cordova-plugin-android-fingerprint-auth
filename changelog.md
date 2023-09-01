@@ -1,3 +1,8 @@
+# Version 2.0.0
+### What's New
+* Updates and renamed by [solidonline@b03b4c7491d7a7e4e26df8b57bfe0835617f9cf committed on Aug 5, 2022](https://github.com/solidonline/cordova-plugin-android-fingerprint-auth/commit/2b03b4c7491d7a7e4e26df8b57bfe0835617f9cf)
+* Updates and renamed by [Aleksandr committed on May 25, 2020](https://github.com/solidonline/cordova-plugin-android-fingerprint-auth/commit/147b9f27b205a5975097a674b31e1fe25ec605aa)
+
 # Version 1.5.1
 ### What's New
 * Fixed by [benjamin committed on Jun 17, 2020](https://github.com/edorex/cordova-plugin-android-fingerprint-auth/commit/1ffa86fd635dbbe72d949773c855aea7a53c33f1)

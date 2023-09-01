@@ -1,5 +1,5 @@
-# Update to Version 1.5.1
-Please consult the [changelog](https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth/blob/master/changelog.md).
+# Update to Version 2.0.0
+Please consult the [changelog](https://github.com/HeronSantosCom/cordova-plugin-android-fingerprint-auth/blob/master/changelog.md).
 
 # About
 This plugin was created referencing the [Fingerprint Dialog sample](http://developer.android.com/samples/FingerprintDialog/index.html) and the [Confirm Credential sample](http://developer.android.com/samples/ConfirmCredential/index.html) referenced by the [Android 6.0 APIs webpage](http://developer.android.com/about/versions/marshmallow/android-6.0.html).
