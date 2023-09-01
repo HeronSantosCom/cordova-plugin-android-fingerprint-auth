@@ -1,7 +1,7 @@
 var exec = require("cordova/exec");
 
-function FingerprintAuth() {
-    FingerprintAuth.prototype.ERRORS = {
+function FingerprintAuthV2() {
+    FingerprintAuthV2.prototype.ERRORS = {
         BAD_PADDING_EXCEPTION: "BAD_PADDING_EXCEPTION",
         CERTIFICATE_EXCEPTION: "CERTIFICATE_EXCEPTION",
         FINGERPRINT_CANCELLED: "FINGERPRINT_CANCELLED",
@@ -23,11 +23,11 @@ function FingerprintAuth() {
     }
 }
 
-FingerprintAuth.prototype.encrypt = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.encrypt = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "encrypt", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -35,11 +35,11 @@ FingerprintAuth.prototype.encrypt = function (params, successCallback, errorCall
     );
 };
 
-FingerprintAuth.prototype.decrypt = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.decrypt = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "decrypt", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -47,11 +47,11 @@ FingerprintAuth.prototype.decrypt = function (params, successCallback, errorCall
     );
 };
 
-FingerprintAuth.prototype.delete = function (params, successCallback, errorCallback) {
+FingerprintAuthV2.prototype.delete = function (params, successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "delete", // action
         [ // Array of arguments to pass to the Java class
             params
@@ -59,25 +59,25 @@ FingerprintAuth.prototype.delete = function (params, successCallback, errorCallb
     );
 };
 
-FingerprintAuth.prototype.dismiss = function (successCallback, errorCallback) {
+FingerprintAuthV2.prototype.dismiss = function (successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "dismiss", // action
         [{}]
     );
 };
 
-FingerprintAuth.prototype.isAvailable = function (successCallback, errorCallback) {
+FingerprintAuthV2.prototype.isAvailable = function (successCallback, errorCallback) {
     cordova.exec(
         successCallback,
         errorCallback,
-        "FingerprintAuth",  // Java Class
+        "FingerprintAuthV2",  // Java Class
         "availability", // action
         [{}]
     );
 };
 
-FingerprintAuth = new FingerprintAuth();
-module.exports = FingerprintAuth;
+FingerprintAuthV2 = new FingerprintAuthV2();
+module.exports = FingerprintAuthV2;

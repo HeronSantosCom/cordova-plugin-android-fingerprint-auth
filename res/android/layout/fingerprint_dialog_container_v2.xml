@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <include layout="@layout/fingerprint_dialog_content" />
+        <include layout="@layout/fingerprint_dialog_content_v2" />
 
     </FrameLayout>
 
@@ -46,13 +46,13 @@
             android:layout_weight="1"
             android:visibility="invisible" />
         <Button
-            android:id="@+id/cancel_button"
+            android:id="@+id/cancel_buttonV2"
             style="?android:attr/buttonBarNegativeButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/second_dialog_button"
+            android:id="@+id/second_dialog_buttonV2"
             style="?android:attr/buttonBarPositiveButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
