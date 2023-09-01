@@ -15,15 +15,15 @@
   ~ limitations under the License
   -->
 <resources>
-    <string name="cancelV2">Отмена</string>
-    <string name="use_backupV2">Ввести PIN</string>
-    <string name="fingerprint_auth_dialog_titleV2">Вход по отпечатку</string>
+    <string name="cancelV2">Cancelar</string>
+    <string name="use_backupV2">Utilizar Backup</string>
+    <string name="fingerprint_auth_dialog_titleV2">Autenticação por impressão digital.</string>
     <string name="okV2">Ok</string>
-    <string name="fingerprint_descriptionV2">Подтвердите вход по отпечатку пальца</string>
-    <string name="fingerprint_hintV2">Коснитесь сенсора</string>
-    <string name="fingerprint_not_recognizedV2">Отпечаток не распознан. Попробуйте еще раз</string>
-    <string name="fingerprint_successV2">Отпечаток считан</string>
-    <string name="new_fingerprint_enrolled_descriptionV2">На устройство добавлен новый отпечаток. Необходима повторная активация</string>
-    <string name="secure_lock_screen_requiredV2">Secure lock screen required!</string>
-    <string name="fingerprint_too_many_attemptsV2">Слишком много неудачных попыток, попробуйте позднее</string>
+    <string name="fingerprint_descriptionV2">Confirme a impressão digital para continuar.</string>
+    <string name="fingerprint_hintV2">Toque no leitor de impressão digital.</string>
+    <string name="fingerprint_not_recognizedV2">Impressão digital inválida, tente novamente.</string>
+    <string name="fingerprint_successV2">Impressão digital reconhecida.</string>
+    <string name="new_fingerprint_enrolled_descriptionV2">Uma nova impressão digital foi adicionada ao dispositivo, digite sua senha.</string>
+    <string name="secure_lock_screen_requiredV2">Digite o código para desbloquear a tela!</string>
+    <string name="fingerprint_too_many_attemptsV2">Número de tentativas excedido, tente novamente mais tarde.</string>
 </resources>
