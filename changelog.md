@@ -1,3 +1,8 @@
+# Version 2.0.1
+### What's New
+* Corrigido o acesso ao FINGERPRINT_ERROR_USER_CANCELED;
+* Corrigido o acesso ao onCancelled();
+
 # Version 2.0.0
 ### What's New
 * Updates and renamed by [solidonline@b03b4c7491d7a7e4e26df8b57bfe0835617f9cf committed on Aug 5, 2022](https://github.com/solidonline/cordova-plugin-android-fingerprint-auth/commit/2b03b4c7491d7a7e4e26df8b57bfe0835617f9cf)

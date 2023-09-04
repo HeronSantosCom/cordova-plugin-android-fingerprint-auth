@@ -257,7 +257,7 @@ public class FingerprintAuthenticationDialogFragmentV2 extends DialogFragment
 
     @Override
     public void onCancelledByUser() {
-        FingerprintAuth.onCancelled();
+        FingerprintAuthV2.onCancelled();
         dismissAllowingStateLoss();
     }
 

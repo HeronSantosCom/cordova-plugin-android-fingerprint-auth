@@ -108,7 +108,7 @@ public class FingerprintUiHelperV2 extends FingerprintManager.AuthenticationCall
         // FINGERPRINT_ERROR_USER_CANCELED is thrown when the user clicks the "cancel" button on the
         // native fingerprint overlay (this overlay appears often on devices with fingerprint on-screen functionality)
         // Error code 1010 was discovered on a Google Pixel 6 where the Home button was pressed during the Fingerprint dialog.
-        if (errMsgId == 1010 || errMsgId == mFingerPrintManager.FINGERPRINT_ERROR_USER_CANCELED || errMsgId == mFingerPrintManager.FINGERPRINT_ERROR_CANCELED) {
+        if (errMsgId == 1010 || errMsgId == FingerprintManager.FINGERPRINT_ERROR_USER_CANCELED || errMsgId == FingerprintManager.FINGERPRINT_ERROR_CANCELED) {
             mCallback.onCancelledByUser();
             return;
         }

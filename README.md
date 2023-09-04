@@ -1,4 +1,4 @@
-# Update to Version 2.0.0
+# Update to Version 2.0.1
 Please consult the [changelog](https://github.com/HeronSantosCom/cordova-plugin-android-fingerprint-auth/blob/master/changelog.md).
 
 # About
